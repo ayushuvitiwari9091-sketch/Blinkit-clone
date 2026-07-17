@@ -115,4 +115,13 @@ function loginback(){
     document.getElementById('login').style.display='none'
     document.getElementById('login-overlay').style.display="none"
 }
+function googleTranslateElementInit(){
+    new google.translate.TranslateElement(
+        {pageLanguage:'en'},
+        'google_translate'
+    )
+}
 
+if('serviceWorker' in navigator){
+    navigator.serviceWorker.register('sw.js')
+}
